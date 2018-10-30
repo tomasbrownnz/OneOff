@@ -1,0 +1,55 @@
+<ion-content padding>
+
+ <p align="center">
+  <img width="320" height="180" src="./assets/imgs/lightLogo.png">
+</p>
+
+<p style="color: #06D6A0" align="center">
+    Tell us a little about yourself!
+  </p>
+
+	<ion-list>
+
+		<ion-item color="dark">
+  		<ion-label color="secondary" floating>First Name</ion-label>
+    	<ion-input color="secondary" [(ngModel)]="profile.firstName" type="text"></ion-input>
+  	</ion-item>
+
+	<ion-item color="dark">
+  		<ion-label color="secondary" floating>Last Name</ion-label>
+    	<ion-input color="secondary" [(ngModel)]="profile.lastName" type="text"></ion-input>
+  	</ion-item>
+
+    <ion-item color="dark">
+      <ion-label color="secondary" floating>Bio</ion-label>
+      <ion-input color="secondary" [(ngModel)]="profile.bio" type="text"></ion-input>
+    </ion-item>
+
+  <ion-item color="dark">
+      <ion-label color="secondary" floating>Age</ion-label>
+      <ion-input color="secondary" [(ngModel)]="profile.age" type="number" step="1"></ion-input>
+    </ion-item>
+
+    <ion-item color="dark">
+      <ion-label color="secondary" floating>Phone Number</ion-label>
+      <ion-input color="secondary" [(ngModel)]="profile.phoneNumber" type="number" step="1"></ion-input>
+    </ion-item>
+
+    <ion-item color="dark">
+      <ion-label color="secondary" floating>Address</ion-label>
+      <ion-input color="secondary" [(ngModel)]="profile.address" type="string"></ion-input>
+    </ion-item>
+
+    <ion-item color="dark">
+      <ion-label color="secondary" floating>Access to Car</ion-label>
+      <ion-select color="secondary" [(ngModel)]="profile.car" type="checkbox">
+          <ion-option value="Yes">Yes</ion-option>
+          <ion-option value="No">No</ion-option>
+      </ion-select>
+    </ion-item>
+
+	</ion-list>
+
+  <button ion-button (click)="createProfile()">Create Profile</button>
+
+</ion-content>

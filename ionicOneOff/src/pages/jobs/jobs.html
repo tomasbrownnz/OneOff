@@ -1,0 +1,50 @@
+<ion-header>
+
+  <ion-toolbar color="dark" align="center">
+      <img width="64" height="36" src="./assets/imgs/lightLogo.png" left>
+        <ion-buttons end>
+          <button ion-button (click)= "newJob()" icon-only color="royal">
+            <ion-icon name="add"></ion-icon>
+          </button>
+        </ion-buttons>
+    </ion-toolbar>
+  </ion-header> 
+  
+
+<ion-content>  
+  <div padding>
+      <ion-segment [(ngModel)]="job">
+        <ion-segment-button value="jobApplied" (ionSelect) = "initialiseArrays()">
+          JOBS APPLIED
+        </ion-segment-button>
+        <ion-segment-button value="myjob" (ionSelect) = "initialiseArrays()">
+          MY JOBS
+          </ion-segment-button>
+      </ion-segment>
+    </div>
+    
+    <div [ngSwitch]="job">
+        <ion-list color="dark" style="height: 200px" *ngSwitchCase="'jobApplied'"> 
+            <ion-item *ngFor="let job of jobsApplied" (click)="viewJobNow(job)" color="white">
+              <h2>Title: {{job.Title}}</h2>
+              <h3>Location: {{job.Suburb}}</h3>
+              <p>Description: {{job.Description}}</p>
+  
+            </ion-item>
+          </ion-list> 
+
+        <ion-list color="dark" style="height: 200px" *ngSwitchDefault> 
+              <ion-item *ngFor="let myjob of myjobs" (click)="viewMyJob(myjob)" color="white">
+                <h2>Title: {{myjob.Title}}</h2>
+                <h3>Location: {{myjob.Suburb}}</h3>
+                <p>Description: {{myjob.Description}}</p>
+                <button ion-button (click)= "menuBar(myjob)" outline color="dark" item-end>
+                    <ion-icon name="menu"></ion-icon>
+                </button>
+              </ion-item>
+            </ion-list> 
+      
+    </div>
+  </ion-content>
+  
+  

@@ -1,0 +1,27 @@
+<ion-content padding>
+  <p align="center">
+  <img width="320" height="180" src="./assets/imgs/lightLogo.png">
+</p>
+  <h1 style="color: #06D6A0" align="center">Welcome to One Off!</h1>
+  
+  <p style="color: #06D6A0" align="center">
+    Please sign in below.
+  </p>
+  
+  <ion-list color="dark">
+  	<ion-item color="dark">
+  		<ion-label color="secondary" floating>Email Address</ion-label>
+    	<ion-input color="secondary" [(ngModel)]="user.email" type="text"></ion-input>
+  	</ion-item>
+	<ion-item color="dark">
+  		<ion-label color="secondary" floating>Password</ion-label>
+    	<ion-input color="secondary" [(ngModel)]="user.password" type="password"></ion-input>
+  	</ion-item>
+  	
+  	<div padding>
+    <button ion-button color="light" (click)="login(user)">Log In</button>
+    <button ion-button color="primary" (click)="register()">Sign Up</button>
+  	</div>
+
+  </ion-list>
+</ion-content>

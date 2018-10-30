@@ -1,0 +1,43 @@
+
+<ion-header align="center" color="dark">  
+    <ion-navbar color="dark" align="center">
+        <img width="64" height="36" src="./assets/imgs/lightLogo.png" end>
+    </ion-navbar>
+  
+</ion-header>
+
+
+<ion-content>
+
+  <ion-card>
+
+     <ion-card-content>
+
+       <img src="assets/imgs/profile.png"/>
+
+      <ion-card-title>
+        {{profile.firstName}} {{profile.lastName}}, {{profile.age}}
+      </ion-card-title>
+
+      <p>        
+        {{profile.bio}}
+        
+      </p>
+
+     </ion-card-content>
+
+      <ion-item>
+      <ion-icon name='contacts' item-start color="dark"></ion-icon>
+      Reviews
+      <ion-badge color="primary" item-end>0</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name='car' item-start color="dark"></ion-icon>
+      Car Access
+      <ion-badge color="primary" item-end>{{profile.car}}</ion-badge>
+    </ion-item>
+
+  </ion-card>
+
+</ion-content>

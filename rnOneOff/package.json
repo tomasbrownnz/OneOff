@@ -1,0 +1,39 @@
+{
+  "name": "rnOneOff",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "babel-jest": "^23.4.0",
+    "babel-preset-react-native-stage-0": "^1.0.1",
+    "fs-extra": "^6.0.1",
+    "jest": "^23.4.0",
+    "react-test-renderer": "^16.4.1",
+    "replace-in-file": "^3.4.0"
+  },
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "rename": "node ./bin/rename.js",
+    "start": "react-native start",
+    "test": "jest"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
+  "dependencies": {
+    "@material-ui/core": "^3.1.2",
+    "eslint-plugin-react-native": "^3.3.0",
+    "fbjs": "^0.8.17",
+    "firebase": "^5.0.3",
+    "navigation": "^5.1.0",
+    "react": "^16.3.2",
+    "react-native": "^0.55.3",
+    "react-native-elements": "^0.19.1",
+    "react-native-firebase": "^4.3.6",
+    "react-native-maps": "^0.21.0",
+    "react-native-navbar": "^2.1.0",
+    "react-native-segmented-control-tab": "^3.3.1",
+    "react-native-vector-icons": "^4.6.0",
+    "react-navigation": "^2.17.0"
+  }
+}

@@ -1,0 +1,43 @@
+<ion-header>
+
+<ion-navbar color="dark" align="center">
+    <img width="64" height="36" src="./assets/imgs/lightLogo.png">
+  </ion-navbar>
+
+</ion-header>
+
+
+
+
+<ion-content>  
+  <div padding>
+      <ion-segment [(ngModel)]="job">
+        <ion-segment-button value="list" (ionSelect)="removeMap()">
+          LIST
+        </ion-segment-button>
+        <ion-segment-button value="map" (ionSelect)="loadMap()">
+          MAP
+          </ion-segment-button>
+      </ion-segment>
+    </div>
+    
+    <div id="map" style="width:100%; height:90%;" [ngSwitch]="job">
+        <ion-list color="dark" style="height: 200px" *ngSwitchDefault> 
+            <ion-item *ngFor="let job of jobs" (click)="viewJob(job)" color="white">
+              <h2>Title: {{job.Title}}</h2>
+              <h3>Location: {{job.Suburb}}</h3>
+              <p>Description: {{job.Description}}</p>
+              <button ion-button (click)= "openActionSheet(job)" outline color="dark" item-end>
+                  <ion-icon name="menu"></ion-icon>
+              </button>
+            </ion-item>
+          </ion-list> 
+
+        <ion-list color="dark" style="height: 200px"  *ngSwitchCase="'map'"> 
+              <ion-item color="white">
+                
+              </ion-item>
+        </ion-list> 
+      
+    </div>
+  </ion-content>

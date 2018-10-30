@@ -1,0 +1,27 @@
+<ion-content padding>
+  <p align="center">
+  <img width="320" height="180" src="./assets/imgs/lightLogo.png">
+</p>
+  <h1 style="color: #06D6A0" align="center">Register to be part of One Off!</h1>
+
+  <p style="color: #06D6A0" align="center">
+    Please enter your details below to join the One Off Comunity.
+  </p>
+  
+  <ion-list>
+
+  	<ion-item color="dark">
+  		<ion-label color="secondary" floating>Email Address</ion-label>
+    	<ion-input color="secondary" [(ngModel)]="user.email" type="text"></ion-input>
+  	</ion-item>
+	 
+   <ion-item color="dark">
+  		<ion-label color="secondary" floating>Password</ion-label>
+    	<ion-input color="secondary" [(ngModel)]="user.password" type="password"></ion-input>
+  	</ion-item>
+  	<div padding>
+    <button ion-button color="primary" (click)="register(user)">Register</button>
+  	</div>
+
+  </ion-list>
+</ion-content>

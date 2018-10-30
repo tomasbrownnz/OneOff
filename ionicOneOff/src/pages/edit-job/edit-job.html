@@ -1,0 +1,75 @@
+<!--
+  Generated template for the NewJobPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header color="dark">
+
+    <ion-navbar align='center' color="dark">
+      <ion-title color="dark"> Edit Job</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding color="dark">
+          <p align="center">
+          <img width="320" height="180" src="./assets/imgs/lightLogo.png">
+        </p>
+          <h1 style="color: #06D6A0" align="center">Ready to find employers?</h1>
+        
+          <p style="color: #06D6A0" align="center">
+            Please enter details about the job below:
+          </p>
+          
+          <ion-list>
+        
+            <ion-item color="dark">
+              <ion-label color="secondary" floating>Job title:  </ion-label>
+              <ion-input  color="secondary" [(ngModel)]="job.Title" type="text"></ion-input>
+            </ion-item>
+           
+            <ion-item color="dark">
+              <ion-label color="secondary" floating>Location:</ion-label>
+              <ion-select color="secondary" [(ngModel)]="job.Suburb" type="checkbox">
+                  <ion-option value="Aro Valley">Aro Valley</ion-option>
+                  <ion-option value="Berhampore">Berhampore</ion-option>
+                  <ion-option value="Breaker Bay">Breaker Bay</ion-option>
+                  <ion-option value="Brooklyn">Brooklyn</ion-option>
+                  <ion-option value="Hataitai">Hataitai</ion-option>
+                  <ion-option value="Island Bay">Island Bay</ion-option>
+                  <ion-option value="Kaiwharawhara">Kaiwharawhara</ion-option>
+                  <ion-option value="Karaka Bays">Karaka Bays</ion-option>
+                  <ion-option value="Karori">Karori</ion-option>
+                  <ion-option value="Kelburn">Kelburn</ion-option>
+                  <ion-option value="Khandalla">Khandalla</ion-option>
+                  <ion-option value="Lyall Bay">Lyall Bay</ion-option>
+                  <ion-option value="Mount Cook">Mount Cook</ion-option>
+                  <ion-option value="Mount Victoria">Mount Victoria</ion-option>
+                  <ion-option value="Newtown">Newtown</ion-option>
+                  <ion-option value="Northland">Northland</ion-option>
+                  <ion-option value="Oriental Bay">Oriental Bay</ion-option>
+                  <ion-option value="Owhiro Bay">Owhiro Bay</ion-option>
+                  <ion-option value="Roseneath">Roseneath</ion-option>
+                  <ion-option value="Seatoun">Seatoun</ion-option>
+                  <ion-option value="Shelly Bay">Shelly Bay</ion-option>
+                  <ion-option value="Te Aro">Te Aro</ion-option>
+                  <ion-option value="Thorndon">Thorndon</ion-option>
+                  <ion-option value="Vogeltown">Vogeltown</ion-option>
+                  <ion-option value="Wellington CBD">Wellington CBD</ion-option>
+              </ion-select>
+            </ion-item>
+  
+            <ion-item color="dark">
+                <ion-label color="secondary" floating>Description:</ion-label>
+                <ion-input color="secondary" [(ngModel)]="job.Description" type="text"></ion-input>
+              </ion-item>
+  
+            <div padding color="dark">
+            <button ion-button color="primary" (click)="editJob()">Edit Job</button>
+            </div>
+        
+          </ion-list>
+  </ion-content>
+  

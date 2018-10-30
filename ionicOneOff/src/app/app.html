@@ -1,0 +1,20 @@
+<ion-menu [content]="content" >
+    <ion-header>
+        <ion-toolbar color="dark">
+            <ion-title align="center">Menu</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    
+    <ion-content>
+    <ion-list>
+    <button ion-item menuClose (click)="openPage('Settings')">
+    Settings
+    </button>
+    <button ion-item menuClose (click)="openPage('Logout')">
+    Logout
+    </button>
+    </ion-list>
+    </ion-content>
+</ion-menu>
+      
+<ion-nav id="nav" [root]="rootPage" #content swipeBackEnabled="true"></ion-nav>

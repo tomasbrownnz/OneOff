@@ -1,0 +1,53 @@
+<ion-header>
+
+  <ion-navbar color="dark" align="center">
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+    <p align="center">
+        <img width="320" height="180" src="./assets/imgs/lightLogo.png">
+      </p>
+
+    <h1 style="color: #06D6A0" align="center">Choose some locations you are available to work at!</h1>
+
+    <p style="color: #06D6A0" align="center">
+        You will only see jobs from these locations.
+    </p>
+
+  <ion-item color="dark">
+    <ion-label color="secondary" floating>Suburb:</ion-label>
+    <ion-select color="secondary" [(ngModel)]="locations" multiple="true">
+        <ion-option value="Aro Valley">Aro Valley</ion-option>
+        <ion-option value="Berhampore">Berhampore</ion-option>
+        <ion-option value="Breaker Bay">Breaker Bay</ion-option>
+        <ion-option value="Brooklyn">Brooklyn</ion-option>
+        <ion-option value="Hataitai">Hataitai</ion-option>
+        <ion-option value="Island Bay">Island Bay</ion-option>
+        <ion-option value="Kaiwharawhara">Kaiwharawhara</ion-option>
+        <ion-option value="Karaka Bays">Karaka Bays</ion-option>
+        <ion-option value="Karori">Karori</ion-option>
+        <ion-option value="Kelburn">Kelburn</ion-option>
+        <ion-option value="Khandalla">Khandalla</ion-option>
+        <ion-option value="Lyall Bay">Lyall Bay</ion-option>
+        <ion-option value="Mount Cook">Mount Cook</ion-option>
+        <ion-option value="Mount Victoria">Mount Victoria</ion-option>
+        <ion-option value="Newtown">Newtown</ion-option>
+        <ion-option value="Northland">Northland</ion-option>
+        <ion-option value="Oriental Bay">Oriental Bay</ion-option>
+        <ion-option value="Owhiro Bay">Owhiro Bay</ion-option>
+        <ion-option value="Roseneath">Roseneath</ion-option>
+        <ion-option value="Seatoun">Seatoun</ion-option>
+        <ion-option value="Shelly Bay">Shelly Bay</ion-option>
+        <ion-option value="Te Aro">Te Aro</ion-option>
+        <ion-option value="Thorndon">Thorndon</ion-option>
+        <ion-option value="Vogeltown">Vogeltown</ion-option>
+        <ion-option value="Wellington CBD">Wellington CBD</ion-option>
+    </ion-select>
+  </ion-item>
+
+      <button (click)="saveSettings(locations)" ion-button outline>Save Settings</button>
+
+  </ion-content>

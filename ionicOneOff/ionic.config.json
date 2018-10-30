@@ -1,0 +1,7 @@
+{
+  "name": "oneoff",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

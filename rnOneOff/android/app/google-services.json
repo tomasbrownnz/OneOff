@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "21126758012",
+    "firebase_url": "https://oneoffreactnative.firebaseio.com",
+    "project_id": "oneoffreactnative",
+    "storage_bucket": "oneoffreactnative.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:21126758012:android:1c98df5cb1d4608f",
+        "android_client_info": {
+          "package_name": "com.oneoff.rnoneoff"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "21126758012-jvrci6kk75qr55qbedcuuhissj8csedn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNs5aPWgHgC6aECQtCokHKuGfJsTm1AYM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

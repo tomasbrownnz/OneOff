@@ -1,0 +1,75 @@
+
+<ion-header>
+
+  <ion-toolbar color="dark" align="center">
+
+    <button ion-button menuToggle left>
+      <ion-icon name="menu" ></ion-icon>
+    </button>
+
+    <img width="64" height="36" src="./assets/imgs/lightLogo.png" end>
+    
+  </ion-toolbar>
+
+</ion-header>
+
+
+
+
+<ion-content>
+    <div padding>
+        <ion-segment [(ngModel)]="job">
+          <ion-segment-button value="Profile">
+            PROFILE
+          </ion-segment-button>
+          <ion-segment-button value="contacts">
+            CONTACTS
+          </ion-segment-button>
+        </ion-segment>
+    </div>
+
+  <div [ngSwitch]="job">      
+        <ion-card *ngSwitchCase="'Profile'" >
+          <ion-card-content>
+
+            <img src="assets/imgs/profile.png"/>
+
+            <ion-card-title>
+              {{firstName}} {{lastName}}, {{age}}
+            </ion-card-title>
+
+            <p>        
+              {{bio}}
+              
+            </p>
+
+          </ion-card-content>
+
+            <ion-item>
+            <ion-icon name='contacts' item-start color="dark"></ion-icon>
+            Reviews
+            <ion-badge color="primary" item-end>0</ion-badge>
+          </ion-item>
+
+          <ion-item>
+            <ion-icon name='car' item-start color="dark"></ion-icon>
+            Car Access
+            <ion-badge color="primary" item-end>{{car}}</ion-badge>
+          </ion-item>
+          <ion-item align='center'>
+            <button ion-button outline color='danger' (click)='editProfile()'>Edit Profile</button>
+          </ion-item>
+        </ion-card>
+
+  <ion-list color="dark" style="height: 200px" *ngSwitchCase="'contacts'"> 
+      <ion-item color="white"  *ngFor="let contact of contacts">
+        <h2>Job Title: {{contact.jobTitle}}</h2>
+        <h3>Employee:{{contact.name}} </h3>
+        <p>Email: {{contact.email}}</p>
+        <p>phone number : {{contact.phoneNumber}} </p>
+      </ion-item>
+    </ion-list> 
+
+  </div>
+
+</ion-content>
